@@ -1,0 +1,50 @@
+{
+ "checks": [
+  {
+   "id": "docs-found",
+   "ok": true,
+   "detail": "2 document(s)",
+   "weight": 1.0,
+   "critical": true
+  },
+  {
+   "id": "entities-found",
+   "ok": true,
+   "detail": "2 entities",
+   "weight": 1.0,
+   "critical": true
+  },
+  {
+   "id": "edges-found",
+   "ok": true,
+   "detail": "2 edges",
+   "weight": 1.0,
+   "critical": false
+  },
+  {
+   "id": "entities-explained",
+   "ok": true,
+   "detail": "0 entities without a surface form",
+   "weight": 1.0,
+   "critical": true
+  },
+  {
+   "id": "edges-anchored",
+   "ok": true,
+   "detail": "2/2 edges re-slice",
+   "weight": 1.0,
+   "critical": true
+  },
+  {
+   "id": "query-matches-graph",
+   "ok": true,
+   "detail": "query returned 2 neighbours, graph holds 2",
+   "weight": 1.0,
+   "critical": true
+  }
+ ],
+ "passed": 6,
+ "total": 6,
+ "ratio": 1.0,
+ "failed_critical": []
+}

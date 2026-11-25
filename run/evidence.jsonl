@@ -1,0 +1,2 @@
+{"id": "e1", "claim": "Sparse routing —combined→ Block-sparse attention", "anchor": {"source": "inputs/doc_a.md", "char_start": 124, "char_end": 191, "quote": "Block-sparse attention (BSA) is often combined with SR in practice."}, "verified": true, "note": "exact"}
+{"id": "e2", "claim": "Sparse routing —complementary→ Block-sparse attention", "anchor": {"source": "inputs/doc_b.md", "char_start": 205, "char_end": 246, "quote": "BSA and sparse routing are complementary."}, "verified": true, "note": "exact"}

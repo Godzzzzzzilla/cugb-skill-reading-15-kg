@@ -1,0 +1,46 @@
+{
+ "entities": [
+  {
+   "id": "sparserouting",
+   "canonical": "Sparse routing",
+   "surfaces": [
+    "SR",
+    "Sparse routing",
+    "Sparse-routing"
+   ],
+   "docs": [
+    "doc_a.md"
+   ],
+   "definitions": [
+    {
+     "doc": "doc_a.md",
+     "short": "SR",
+     "long": "Sparse routing",
+     "reason": "defined in text"
+    }
+   ],
+   "explained_by": "definition"
+  },
+  {
+   "id": "blocksparseattention",
+   "canonical": "Block-sparse attention",
+   "surfaces": [
+    "BSA",
+    "Block-sparse attention",
+    "Block-sparse-attention"
+   ],
+   "docs": [
+    "doc_a.md"
+   ],
+   "definitions": [
+    {
+     "doc": "doc_a.md",
+     "short": "BSA",
+     "long": "Block-sparse attention",
+     "reason": "defined in text"
+    }
+   ],
+   "explained_by": "definition"
+  }
+ ]
+}

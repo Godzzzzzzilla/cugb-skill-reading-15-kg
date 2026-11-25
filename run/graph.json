@@ -1,0 +1,102 @@
+{
+ "nodes": [
+  {
+   "id": "sparserouting",
+   "canonical": "Sparse routing",
+   "surfaces": [
+    "SR",
+    "Sparse routing",
+    "Sparse-routing"
+   ],
+   "docs": [
+    "doc_a.md"
+   ],
+   "definitions": [
+    {
+     "doc": "doc_a.md",
+     "short": "SR",
+     "long": "Sparse routing",
+     "reason": "defined in text"
+    }
+   ],
+   "explained_by": "definition"
+  },
+  {
+   "id": "blocksparseattention",
+   "canonical": "Block-sparse attention",
+   "surfaces": [
+    "BSA",
+    "Block-sparse attention",
+    "Block-sparse-attention"
+   ],
+   "docs": [
+    "doc_a.md"
+   ],
+   "definitions": [
+    {
+     "doc": "doc_a.md",
+     "short": "BSA",
+     "long": "Block-sparse attention",
+     "reason": "defined in text"
+    }
+   ],
+   "explained_by": "definition"
+  }
+ ],
+ "edges": [
+  {
+   "source": "Sparse routing",
+   "target": "Block-sparse attention",
+   "relation": "combined",
+   "doc": "doc_a.md",
+   "source_ref": "inputs/doc_a.md",
+   "char_start": 124,
+   "char_end": 191,
+   "quote": "Block-sparse attention (BSA) is often combined with SR in practice.",
+   "edge_id": "e1",
+   "verified": true
+  },
+  {
+   "source": "Sparse routing",
+   "target": "Block-sparse attention",
+   "relation": "complementary",
+   "doc": "doc_b.md",
+   "source_ref": "inputs/doc_b.md",
+   "char_start": 205,
+   "char_end": 246,
+   "quote": "BSA and sparse routing are complementary.",
+   "edge_id": "e2",
+   "verified": true
+  }
+ ],
+ "query": {
+  "query": "sparse routing",
+  "resolved_to": "Sparse routing",
+  "aliases_used": [
+   "SR",
+   "Sparse routing",
+   "Sparse-routing"
+  ],
+  "neighbours": [
+   {
+    "entity": "Block-sparse attention",
+    "direction": "out",
+    "relation": "combined",
+    "doc": "doc_a.md",
+    "quote": "Block-sparse attention (BSA) is often combined with SR in practice.",
+    "char_start": 124,
+    "char_end": 191
+   },
+   {
+    "entity": "Block-sparse attention",
+    "direction": "out",
+    "relation": "complementary",
+    "doc": "doc_b.md",
+    "quote": "BSA and sparse routing are complementary.",
+    "char_start": 205,
+    "char_end": 246
+   }
+  ],
+  "degree": 2
+ }
+}

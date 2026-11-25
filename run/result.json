@@ -1,0 +1,436 @@
+{
+ "schema": "arm-skill-result/1.1",
+ "skill": {
+  "name": "reading-15-kg",
+  "version": "1.0.0",
+  "armkit": "1.1.0"
+ },
+ "case_id": "demo-kg-01",
+ "status": "success",
+ "status_reason": "every entity and edge is explained and anchored, and the query agrees with the graph",
+ "result": {
+  "entities": [
+   {
+    "id": "sparserouting",
+    "canonical": "Sparse routing",
+    "surfaces": [
+     "SR",
+     "Sparse routing",
+     "Sparse-routing"
+    ],
+    "docs": [
+     "doc_a.md"
+    ],
+    "definitions": [
+     {
+      "doc": "doc_a.md",
+      "short": "SR",
+      "long": "Sparse routing",
+      "reason": "defined in text"
+     }
+    ],
+    "explained_by": "definition"
+   },
+   {
+    "id": "blocksparseattention",
+    "canonical": "Block-sparse attention",
+    "surfaces": [
+     "BSA",
+     "Block-sparse attention",
+     "Block-sparse-attention"
+    ],
+    "docs": [
+     "doc_a.md"
+    ],
+    "definitions": [
+     {
+      "doc": "doc_a.md",
+      "short": "BSA",
+      "long": "Block-sparse attention",
+      "reason": "defined in text"
+     }
+    ],
+    "explained_by": "definition"
+   }
+  ],
+  "edges": [
+   {
+    "source": "Sparse routing",
+    "target": "Block-sparse attention",
+    "relation": "combined",
+    "doc": "doc_a.md",
+    "source_ref": "inputs/doc_a.md",
+    "char_start": 124,
+    "char_end": 191,
+    "quote": "Block-sparse attention (BSA) is often combined with SR in practice.",
+    "edge_id": "e1",
+    "verified": true
+   },
+   {
+    "source": "Sparse routing",
+    "target": "Block-sparse attention",
+    "relation": "complementary",
+    "doc": "doc_b.md",
+    "source_ref": "inputs/doc_b.md",
+    "char_start": 205,
+    "char_end": 246,
+    "quote": "BSA and sparse routing are complementary.",
+    "edge_id": "e2",
+    "verified": true
+   }
+  ],
+  "aliases": [
+   {
+    "surface": "SR",
+    "canonical": "Sparse routing"
+   },
+   {
+    "surface": "Sparse routing",
+    "canonical": "Sparse routing"
+   },
+   {
+    "surface": "Sparse-routing",
+    "canonical": "Sparse routing"
+   },
+   {
+    "surface": "BSA",
+    "canonical": "Block-sparse attention"
+   },
+   {
+    "surface": "Block-sparse attention",
+    "canonical": "Block-sparse attention"
+   },
+   {
+    "surface": "Block-sparse-attention",
+    "canonical": "Block-sparse attention"
+   }
+  ],
+  "query": {
+   "query": "sparse routing",
+   "resolved_to": "Sparse routing",
+   "aliases_used": [
+    "SR",
+    "Sparse routing",
+    "Sparse-routing"
+   ],
+   "neighbours": [
+    {
+     "entity": "Block-sparse attention",
+     "direction": "out",
+     "relation": "combined",
+     "doc": "doc_a.md",
+     "quote": "Block-sparse attention (BSA) is often combined with SR in practice.",
+     "char_start": 124,
+     "char_end": 191
+    },
+    {
+     "entity": "Block-sparse attention",
+     "direction": "out",
+     "relation": "complementary",
+     "doc": "doc_b.md",
+     "quote": "BSA and sparse routing are complementary.",
+     "char_start": 205,
+     "char_end": 246
+    }
+   ],
+   "degree": 2
+  },
+  "counts": {
+   "entities": 2,
+   "edges": 2,
+   "aliases": 7,
+   "documents": 2
+  }
+ },
+ "evidence": [
+  {
+   "id": "e1",
+   "claim": "Sparse routing —combined→ Block-sparse attention",
+   "anchor": {
+    "source": "inputs/doc_a.md",
+    "char_start": 124,
+    "char_end": 191,
+    "quote": "Block-sparse attention (BSA) is often combined with SR in practice."
+   },
+   "verified": true,
+   "note": "exact"
+  },
+  {
+   "id": "e2",
+   "claim": "Sparse routing —complementary→ Block-sparse attention",
+   "anchor": {
+    "source": "inputs/doc_b.md",
+    "char_start": 205,
+    "char_end": 246,
+    "quote": "BSA and sparse routing are complementary."
+   },
+   "verified": true,
+   "note": "exact"
+  }
+ ],
+ "uncertainty": [],
+ "limits": [],
+ "audit": {
+  "checks": [
+   {
+    "id": "docs-found",
+    "ok": true,
+    "detail": "2 document(s)",
+    "weight": 1.0,
+    "critical": true
+   },
+   {
+    "id": "entities-found",
+    "ok": true,
+    "detail": "2 entities",
+    "weight": 1.0,
+    "critical": true
+   },
+   {
+    "id": "edges-found",
+    "ok": true,
+    "detail": "2 edges",
+    "weight": 1.0,
+    "critical": false
+   },
+   {
+    "id": "entities-explained",
+    "ok": true,
+    "detail": "0 entities without a surface form",
+    "weight": 1.0,
+    "critical": true
+   },
+   {
+    "id": "edges-anchored",
+    "ok": true,
+    "detail": "2/2 edges re-slice",
+    "weight": 1.0,
+    "critical": true
+   },
+   {
+    "id": "query-matches-graph",
+    "ok": true,
+    "detail": "query returned 2 neighbours, graph holds 2",
+    "weight": 1.0,
+    "critical": true
+   }
+  ],
+  "passed": 6,
+  "total": 6,
+  "ratio": 1.0,
+  "failed_critical": []
+ },
+ "artifacts": [
+  {
+   "path": "entities.json",
+   "kind": "data",
+   "exists": true,
+   "bytes": 776,
+   "sha256": "6c5a31a9bc3ab60c3527ca7d802b917a4d3828386f44e22bf5a4c2dc75e071fe",
+   "note": "entities with their surfaces and definitions"
+  },
+  {
+   "path": "edges.json",
+   "kind": "data",
+   "exists": true,
+   "bytes": 655,
+   "sha256": "62a76f176c50b19b2b7948a5e1b067a25d1bfb69a78e262389dc378db124148f",
+   "note": "edges with provenance"
+  },
+  {
+   "path": "graph.json",
+   "kind": "data",
+   "exists": true,
+   "bytes": 2101,
+   "sha256": "e64543008387eb84bc6d7acb1e698bf326ec81657eec7693c2935d2850d997f9",
+   "note": "nodes + edges + query answer"
+  }
+ ],
+ "contract": {
+  "declared_fields": [
+   "entities",
+   "edges",
+   "aliases",
+   "query",
+   "evidence"
+  ],
+  "fields": {
+   "entities": [
+    {
+     "id": "sparserouting",
+     "canonical": "Sparse routing",
+     "surfaces": [
+      "SR",
+      "Sparse routing",
+      "Sparse-routing"
+     ],
+     "docs": [
+      "doc_a.md"
+     ],
+     "definitions": [
+      {
+       "doc": "doc_a.md",
+       "short": "SR",
+       "long": "Sparse routing",
+       "reason": "defined in text"
+      }
+     ],
+     "explained_by": "definition"
+    },
+    {
+     "id": "blocksparseattention",
+     "canonical": "Block-sparse attention",
+     "surfaces": [
+      "BSA",
+      "Block-sparse attention",
+      "Block-sparse-attention"
+     ],
+     "docs": [
+      "doc_a.md"
+     ],
+     "definitions": [
+      {
+       "doc": "doc_a.md",
+       "short": "BSA",
+       "long": "Block-sparse attention",
+       "reason": "defined in text"
+      }
+     ],
+     "explained_by": "definition"
+    }
+   ],
+   "edges": [
+    {
+     "source": "Sparse routing",
+     "target": "Block-sparse attention",
+     "relation": "combined",
+     "doc": "doc_a.md",
+     "source_ref": "inputs/doc_a.md",
+     "char_start": 124,
+     "char_end": 191,
+     "quote": "Block-sparse attention (BSA) is often combined with SR in practice.",
+     "edge_id": "e1",
+     "verified": true
+    },
+    {
+     "source": "Sparse routing",
+     "target": "Block-sparse attention",
+     "relation": "complementary",
+     "doc": "doc_b.md",
+     "source_ref": "inputs/doc_b.md",
+     "char_start": 205,
+     "char_end": 246,
+     "quote": "BSA and sparse routing are complementary.",
+     "edge_id": "e2",
+     "verified": true
+    }
+   ],
+   "aliases": [
+    {
+     "surface": "SR",
+     "canonical": "Sparse routing"
+    },
+    {
+     "surface": "Sparse routing",
+     "canonical": "Sparse routing"
+    },
+    {
+     "surface": "Sparse-routing",
+     "canonical": "Sparse routing"
+    },
+    {
+     "surface": "BSA",
+     "canonical": "Block-sparse attention"
+    },
+    {
+     "surface": "Block-sparse attention",
+     "canonical": "Block-sparse attention"
+    },
+    {
+     "surface": "Block-sparse-attention",
+     "canonical": "Block-sparse attention"
+    }
+   ],
+   "query": {
+    "query": "sparse routing",
+    "resolved_to": "Sparse routing",
+    "aliases_used": [
+     "SR",
+     "Sparse routing",
+     "Sparse-routing"
+    ],
+    "neighbours": [
+     {
+      "entity": "Block-sparse attention",
+      "direction": "out",
+      "relation": "combined",
+      "doc": "doc_a.md",
+      "quote": "Block-sparse attention (BSA) is often combined with SR in practice.",
+      "char_start": 124,
+      "char_end": 191
+     },
+     {
+      "entity": "Block-sparse attention",
+      "direction": "out",
+      "relation": "complementary",
+      "doc": "doc_b.md",
+      "quote": "BSA and sparse routing are complementary.",
+      "char_start": 205,
+      "char_end": 246
+     }
+    ],
+    "degree": 2
+   },
+   "evidence": [
+    {
+     "id": "e1",
+     "claim": "Sparse routing —combined→ Block-sparse attention",
+     "anchor": {
+      "source": "inputs/doc_a.md",
+      "char_start": 124,
+      "char_end": 191,
+      "quote": "Block-sparse attention (BSA) is often combined with SR in practice."
+     },
+     "verified": true,
+     "note": "exact"
+    },
+    {
+     "id": "e2",
+     "claim": "Sparse routing —complementary→ Block-sparse attention",
+     "anchor": {
+      "source": "inputs/doc_b.md",
+      "char_start": 205,
+      "char_end": 246,
+      "quote": "BSA and sparse routing are complementary."
+     },
+     "verified": true,
+     "note": "exact"
+    }
+   ]
+  },
+  "unmapped": [],
+  "raw": {
+   "fields": [
+    "entities",
+    "edges",
+    "aliases",
+    "query",
+    "evidence"
+   ]
+  }
+ },
+ "run": {
+  "started_at": "2026-11-25T07:55:08Z",
+  "finished_at": "2026-11-25T07:55:08Z",
+  "argv": [
+   "scripts/run.py",
+   "--input",
+   "examples/case.json",
+   "--output",
+   "C:\\Users\\zcy\\WorkBuddy\\2026-11-25-15-07-35\\arena\\tasks\\reading-15-kg\\app_output"
+  ],
+  "python": "3.13.14",
+  "cwd": "C:\\Users\\zcy\\WorkBuddy\\2026-11-25-15-07-35\\arena\\tasks\\reading-15-kg",
+  "case_notes": []
+ }
+}

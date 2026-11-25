@@ -1,0 +1,28 @@
+{
+ "edges": [
+  {
+   "source": "Sparse routing",
+   "target": "Block-sparse attention",
+   "relation": "combined",
+   "doc": "doc_a.md",
+   "source_ref": "inputs/doc_a.md",
+   "char_start": 124,
+   "char_end": 191,
+   "quote": "Block-sparse attention (BSA) is often combined with SR in practice.",
+   "edge_id": "e1",
+   "verified": true
+  },
+  {
+   "source": "Sparse routing",
+   "target": "Block-sparse attention",
+   "relation": "complementary",
+   "doc": "doc_b.md",
+   "source_ref": "inputs/doc_b.md",
+   "char_start": 205,
+   "char_end": 246,
+   "quote": "BSA and sparse routing are complementary.",
+   "edge_id": "e2",
+   "verified": true
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "deviations_from_paper": [
+  {
+   "target": "evidence anchors re-slice exactly",
+   "metric": "custom",
+   "reference_value": 1.0,
+   "actual_value": 1.0,
+   "score": 1.0,
+   "tolerance": 0.0,
+   "verifier_script": "scripts/verify.py",
+   "evidence_artifact": "result",
+   "explanation": "Every evidence item is a character range into an emitted text file; verify.py re-slices it and recomputes the share that still matches."
+  }
+ ],
+ "envelope": [
+  {
+   "condition": "entities defined by an acronym in the text",
+   "status": "in envelope",
+   "note": "long form, acronym and hyphen variants resolved; 2/2 edges anchored on the demo"
+  },
+  {
+   "condition": "entities that repeat but are never defined",
+   "status": "in envelope",
+   "note": "kept when the term occurs at least twice"
+  },
+  {
+   "condition": "single-occurrence entity with no definition",
+   "status": "out of envelope",
+   "note": "not promoted to a node; listed in limits"
+  }
+ ],
+ "failure_modes": [
+  {
+   "mode": "sentence boundary read as a multi-word term",
+   "impact": "fixed by restricting term spans to single-line capitalised runs"
+  },
+  {
+   "mode": "acronym used before its definition",
+   "impact": "resolved, because aliases are collected in a first pass over the whole corpus"
+  },
+  {
+   "mode": "query disagrees with the graph",
+   "impact": "query-matches-graph fails; the count difference is reported"
+  }
+ ],
+ "sensitivity": [],
+ "note": "This is a skill-authoring challenge: the targets are the demonstration benchmark and the audit, not a paper's reported numbers."
+}

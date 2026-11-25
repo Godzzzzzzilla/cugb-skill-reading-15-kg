@@ -1,0 +1,7 @@
+{
+ "case_id": "demo-kg-01",
+ "task": "Build an entity graph across the notes: resolve aliases and abbreviations, keep provenance for every node and edge, and answer a query from the graph.",
+ "materials": ["doc_a.md", "doc_b.md"],
+ "query": "sparse routing",
+ "output_contract": {"fields": ["entities", "edges", "aliases", "query", "evidence"]}
+}
